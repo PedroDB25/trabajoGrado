@@ -18,17 +18,16 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
             <div class="container">
                 <a class="navbar-brand" href="#">Atlas de mineralogía óptica</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbars" aria-controls="navbars" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars"
+                    aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbars">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-                                aria-expanded="false">Propiedades opticas</a>
+                            <span class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">Propiedades opticas</span>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Introduccion a las propiedades opticas</a></li>
                                 <li><a class="dropdown-item" href="#">Microscopio petrografico</a></li>
@@ -36,18 +35,20 @@
                                 <li><a class="dropdown-item" href="#">Exfoliacion y fractura</a></li>
                                 <li><a class="dropdown-item" href="#">Alteraciones</a></li>
                                 <li><a class="dropdown-item" href="#">Maclas</a></li>
-                                <li><a class="dropdown-item" href="#">Otros (exsoluciones, zonaciones, inclusiones,..)</a></li>
+                                <li><a class="dropdown-item" href="#">Otros (exsoluciones, zonaciones,
+                                        inclusiones,..)</a></li>
                                 <li><a class="dropdown-item" href="#">Color y pleocroismo</a></li>
                                 <li><a class="dropdown-item" href="#">Indice de refraccion y relieve</a></li>
                                 <li><a class="dropdown-item" href="#">Isotropia y anisotropia: indicatrices</a></li>
-                                <li><a class="dropdown-item" href="#">Fenómenos de interferencia y birrefringencia</a></li>
+                                <li><a class="dropdown-item" href="#">Fenómenos de interferencia y birrefringencia</a>
+                                </li>
                                 <li><a class="dropdown-item" href="#">Ángulo de extinción y elongación</a></li>
                                 <li><a class="dropdown-item" href="#">Signos ópticos</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-                                aria-expanded="false">Grupos minerales</a>
+                            <span class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">Grupos minerales</span>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Tectosilicatos</a></li>
                                 <li><a class="dropdown-item" href="#">Filosilicatos</a></li>
@@ -63,19 +64,37 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Anexos</a>
-                          </li>
+                        </li>
                     </ul>
 
-                    <form role="search">
-                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                        <input class="" type="submit" value="Enviar link">
+                    <form class="row">
+                        <input class="form-control col" type="search" placeholder="Ruta Api" aria-label="Search">
+                        <button type="submit" class="btn btn-secondary col-4">Enviar ruta</button>
                     </form>
                 </div>
             </div>
         </nav>
 
-        <div class="body row"></div>
-        <div class="footer row"></div>
+        <div class="body row">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+
+
+        </div>
+        <div class="footer row">
+            <div class="row d-flex justify-content-center">
+                <div class="col-10">
+                    <p>Autor: Pedro Dominguez (Junio, 2023), Basado en la obra de Pedro Pablo Gil-Crespo (2009) de
+                        Universidad del País Vasco - Euskal Herriko Unibertsitatea (UPV/EHU)</p>
+                    <p>Bienvenidos al Atlas de mineralogia optica, este atlas tiene por objetivo recopilar fotografias
+                        de minerales para su estudio con Computer Vision (CV).</p>
+                </div>
+            </div>
+        </div>
 
 
     </div>
