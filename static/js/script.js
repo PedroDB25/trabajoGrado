@@ -11,30 +11,51 @@ var JSONEspeado = {
     }
 }
 
-
 window.onload = () => {
     var BtnURLBase = document.querySelector("#BtnURLBase")
     BtnURLBase.addEventListener("click", () => {
         urlBase = document.querySelector("#campoURLBase").value
         //Pedir los datos del servidor
 
-        //Recorrer estos datos
+        //Recorrer estos datos y crear cartas en bootstrap
         for (const i of Object.keys(JSONEspeado.data)) {
-            var div = document.createElement("div")
+            var card = document.createElement("div")
+            var cardbody = document.createElement("div")
             var img = document.createElement("img")
+            var titulo = document.createElement("h5")
+            var link = document.createElement("a")
 
 
-            div.className = "col-3"
 
-            img.alt="Imagen "
-            img.style.objectFit = "fill"
+
+            card.className = "card"
+            card.style.width= "18rem"
+
+            cardbody.className = "card-body"
+
+            img.className = "card-img-top img-fluid"
+            img.setAttribute("alt",JSONEspeado.data[i])
+            img.style.objectFit = "cover"
             img.setAttribute("onerror","this.onerror=null;this.src='static/img/onError.jpg';")
-            img.src = i + ".jpg"
+            img.src = "static/img/"+i + ".jpg"
+
+            titulo.className = "card-title"
+            titulo.innerHTML = JSONEspeado.data[i]
+
+            link.className = "btn btn-primary"
+            link.innerHTML = JSONEspeado.data[i]
 
 
-            div.appendChild(img)
-            document.querySelector(".body").appendChild(div)
+            cardbody.appendChild(titulo)
+            cardbody.appendChild(link)
+
+
+            card.appendChild(img)
+            card.appendChild(cardbody)
+            document.querySelector(".body").appendChild(card)
         }
     })
 
 }
+
+
